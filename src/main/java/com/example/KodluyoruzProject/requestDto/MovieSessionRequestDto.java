@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class MovieSessionRequestDto {
 
-    private Integer id;
+    private int id;
     private LocalDateTime time;
 
 }

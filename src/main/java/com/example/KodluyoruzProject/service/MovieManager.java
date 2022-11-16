@@ -29,8 +29,8 @@ public class MovieManager implements MovieService {
         return movieMapper.ConverterforSaveMovie(movieSaveRequestDto);
     }
 
-    @Override
-    public List<MovieResponseDto> findAllMoviesById(Integer id) {
+  /*  @Override
+    public List<MovieResponseDto> findAllMoviesById(int id) {
         Movie NewMovieId=movieRepository.findById(id).get();
         List<Movie> movieByIdList=movieRepository.findAllMoviesById(NewMovieId);
 
@@ -40,7 +40,7 @@ public class MovieManager implements MovieService {
            movieResponseDtos.add(movieResponseDto);
         }
         return movieResponseDtos;
-    }
+    }*/
 
     @Override
     public List<MovieResponseDto> findAllMovies() {
@@ -54,8 +54,8 @@ public class MovieManager implements MovieService {
     }
 
     @Override
-    public void deleteMovieById(Integer id) {
-        Movie movie=movieRepository.findById(id).get();
+    public void deleteMovieById(int Id) {
+        Movie movie=movieRepository.findById(Id).get();
         movieRepository.delete(movie);
     }
 

@@ -3,6 +3,8 @@ import javax.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Data
 @Table(name="movie")
@@ -11,11 +13,15 @@ public class Movie {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    @Column(name = "MOVIE_ID")
+    private int Id;
 
     private String title;
 
     private String description;
+
+
+
 
 
 }

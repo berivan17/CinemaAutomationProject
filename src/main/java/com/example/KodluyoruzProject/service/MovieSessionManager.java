@@ -46,7 +46,7 @@ public class MovieSessionManager implements MovieSessionService {
     }
 
     @Override
-    public List<MovieSessionResponseDto> findAllMovieSessionById(Integer id) { //dikkat yanlış olabilir
+    public List<MovieSessionResponseDto> findAllMovieSessionById(int id) { //dikkat yanlış olabilir
         MovieSession NewMovieSessionId=movieSessionRepository.findById(id).get();
         List<MovieSession> movieSessionByIdList=movieSessionRepository.findAllMovieSessionById(NewMovieSessionId);
 
@@ -60,7 +60,7 @@ public class MovieSessionManager implements MovieSessionService {
 
 
     @Override
-    public void removeSession(Integer id) {
+    public void removeSession(int id) {
         MovieSession movieSession=movieSessionRepository.findById(id).get();
         movieSessionRepository.delete(movieSession);
     }

@@ -36,11 +36,11 @@ public class MovieController {
         return new ResponseEntity<>(movieResponseDtoList, HttpStatus.OK);
     }
 
-    @GetMapping("/findAllMoviesById")
-    public ResponseEntity<List<MovieResponseDto>> findAllMoviesById(@RequestParam Integer id){
+  /*  @GetMapping("/findAllMoviesById")
+    public ResponseEntity<List<MovieResponseDto>> findAllMoviesById(@RequestParam int id){
         List<MovieResponseDto> movieResponseDtoList=movieService.findAllMoviesById(id);
         return new ResponseEntity<>(movieResponseDtoList,HttpStatus.OK);
     }
-
+*/
 
 }

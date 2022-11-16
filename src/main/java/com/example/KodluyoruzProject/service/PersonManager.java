@@ -48,7 +48,7 @@ public class PersonManager implements PersonService{
     }
 
     @Override
-    public void deletePersonById(Integer id) {
+    public void deletePersonById(int id) {
         Person person=personRepository.findById(id).get();
         personRepository.delete(person);
     }

@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 
 @Data
 public class MovieSessionResponseDto {
-    private Integer id;
+    private int id;
     private LocalDateTime time;
 
 }

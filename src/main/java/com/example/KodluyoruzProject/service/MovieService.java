@@ -6,9 +6,9 @@ import com.example.KodluyoruzProject.responseDto.MovieResponseDto;
 
 public interface MovieService {
     MovieResponseDto saveMovie(MovieSaveRequestDto movieSaveRequestDto);
-    List<MovieResponseDto> findAllMoviesById(Integer id);
+  /*  List<MovieResponseDto> findAllMoviesById(int id);*/
     List<MovieResponseDto> findAllMovies();
 
-    public void deleteMovieById(Integer id);
+    public void deleteMovieById(int Id);
 
 }

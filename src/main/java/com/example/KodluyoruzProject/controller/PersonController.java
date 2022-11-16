@@ -29,7 +29,7 @@ public class PersonController {
         return new ResponseEntity<>(personResponseDtoList,HttpStatus.OK);
     }
     @DeleteMapping("/deletePerson")
-    public void deletePersonById(@RequestParam Integer id){
+    public void deletePersonById(@RequestParam int id){
         personService.deletePersonById(id);
     }
 

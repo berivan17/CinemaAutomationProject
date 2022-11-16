@@ -12,11 +12,11 @@ public interface MovieSessionService {
     List<MovieSessionResponseDto> findAllMovieSessions();
     Integer saveMovieSession(MovieSessionRequestDto movieSessionRequestDto);
 
-    List<MovieSessionResponseDto> findAllMovieSessionById(Integer id);
+    List<MovieSessionResponseDto> findAllMovieSessionById(int id);
 
 
 
-    void removeSession(Integer id);
+    void removeSession(int id);
 
 
 }

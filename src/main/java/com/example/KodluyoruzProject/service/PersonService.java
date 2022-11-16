@@ -8,5 +8,5 @@ import java.util.List;
 public interface PersonService {
     PersonResponseDto savePerson(PersonSaveRequestDto personSaveRequestDto);
     List<PersonResponseDto> findAllPeople();
-    void deletePersonById(Integer id);
+    void deletePersonById(int id);
 }

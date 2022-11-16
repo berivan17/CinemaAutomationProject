@@ -8,7 +8,7 @@ import java.util.List;
 @Repository
 public interface MovieRepository extends CrudRepository<Movie,Integer> {
 
-    List<Movie> findAllMoviesById(Movie movie);
+  /*  List<Movie> findAllMoviesById(Movie movie); */
 
 
 

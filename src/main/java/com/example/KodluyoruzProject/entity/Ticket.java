@@ -11,21 +11,16 @@ import lombok.NoArgsConstructor;
 public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
-    private Integer price;
+    @Column(name = "id")
+    private int id;
+    private int price;
     private String seat;
 
-    public Ticket(Integer id,String seat,Integer price){
-        this.id=id;
-        this.seat=seat;
-        this.price=price;
-    }
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name= "MOVIE_ID", referencedColumnName = "MOVIE_ID")
+    private Movie movie;
 
-    @ManyToOne
-    private MovieSession movieSession;
 
-    @ManyToOne
-    private Person person;
 
 
 

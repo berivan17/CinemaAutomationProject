@@ -4,11 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Column;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class MovieSaveRequestDto {
-    private Integer id;
+
+    private int Id;
     private String title;
     private String description;
 

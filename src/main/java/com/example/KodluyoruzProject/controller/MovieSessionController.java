@@ -28,13 +28,13 @@ public class MovieSessionController {
 
 
     @GetMapping("/findAllMovieSessionById")
-    public ResponseEntity<List<MovieSessionResponseDto>> findAllMoviesById(@RequestParam Integer id){
+    public ResponseEntity<List<MovieSessionResponseDto>> findAllMoviesById(@RequestParam int id){
         List<MovieSessionResponseDto> movieSessionResponseDtoList=movieSessionService.findAllMovieSessionById(id);
         return new ResponseEntity<>(movieSessionResponseDtoList,HttpStatus.OK);
     }
 
     @DeleteMapping("/deleteMovieSession")
-    public void removeSession(@RequestParam Integer id){
+    public void removeSession(@RequestParam int id){
         movieSessionService.removeSession(id);
     }
 

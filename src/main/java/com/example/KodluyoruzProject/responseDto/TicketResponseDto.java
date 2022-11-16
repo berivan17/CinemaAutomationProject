@@ -4,6 +4,8 @@ import lombok.Data;
 
 @Data
 public class TicketResponseDto {
-    private Integer id;
-    private Integer price;
+    private int id;
+    private int price;
+    private String seat;
+
 }
