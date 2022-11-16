@@ -12,7 +12,11 @@ public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private String fullName;
+    @Column
+    private String firstName;
+    @Column
+    private String lastName;
+    @Column
     private String password;
 
 }

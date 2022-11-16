@@ -6,7 +6,7 @@ import com.example.KodluyoruzProject.responseDto.PersonResponseDto;
 import java.util.List;
 
 public interface PersonService {
-    Integer savePerson(PersonSaveRequestDto personSaveRequestDto);
+    PersonResponseDto savePerson(PersonSaveRequestDto personSaveRequestDto);
     List<PersonResponseDto> findAllPeople();
     void deletePersonById(Integer id);
 }

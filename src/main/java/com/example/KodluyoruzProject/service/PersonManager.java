@@ -1,5 +1,6 @@
 package com.example.KodluyoruzProject.service;
 import com.example.KodluyoruzProject.entity.Person;
+import com.example.KodluyoruzProject.mapper.PersonMapper;
 import com.example.KodluyoruzProject.repository.PersonRepository;
 import com.example.KodluyoruzProject.requestDto.PersonSaveRequestDto;
 import com.example.KodluyoruzProject.responseDto.PersonResponseDto;
@@ -24,13 +25,16 @@ public class PersonManager implements PersonService{
    @Autowired
    private ModelMapper modelMapper;
 
+   @Autowired
+   PersonMapper personMapper;
+
 
     @Override
-    public Integer savePerson(PersonSaveRequestDto personSaveRequestDto) {
-        Person person=modelMapper.map(personSaveRequestDto,Person.class);
-        person=personRepository.save(person);
-        return person.getId();
+    public PersonResponseDto savePerson(PersonSaveRequestDto personSaveRequestDto) {
+       return personMapper.ConverterforPerson(personSaveRequestDto);
+
     }
+
 
     @Override
     public List<PersonResponseDto> findAllPeople() {

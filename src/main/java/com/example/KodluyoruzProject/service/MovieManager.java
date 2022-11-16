@@ -1,6 +1,7 @@
 package com.example.KodluyoruzProject.service;
 
 import com.example.KodluyoruzProject.entity.Movie;
+import com.example.KodluyoruzProject.mapper.MovieMapper;
 import com.example.KodluyoruzProject.repository.MovieRepository;
 import com.example.KodluyoruzProject.requestDto.MovieSaveRequestDto;
 import com.example.KodluyoruzProject.responseDto.MovieResponseDto;
@@ -19,18 +20,17 @@ public class MovieManager implements MovieService {
     @Autowired
     ModelMapper modelMapper;
 
-
+    @Autowired
+    MovieMapper movieMapper;
 
 
     @Override
-    public Integer saveMovie(MovieSaveRequestDto movieSaveRequestDto) {
-        Movie movie =modelMapper.map(movieSaveRequestDto,Movie.class);
-        movie=movieRepository.save(movie);
-        return movie.getId();
+    public MovieResponseDto saveMovie(MovieSaveRequestDto movieSaveRequestDto) {
+        return movieMapper.ConverterforSaveMovie(movieSaveRequestDto);
     }
 
     @Override
-    public List<MovieResponseDto> findAllMoviesById(Integer id) { //dikkat yanlış olabilir
+    public List<MovieResponseDto> findAllMoviesById(Integer id) {
         Movie NewMovieId=movieRepository.findById(id).get();
         List<Movie> movieByIdList=movieRepository.findAllMoviesById(NewMovieId);
 

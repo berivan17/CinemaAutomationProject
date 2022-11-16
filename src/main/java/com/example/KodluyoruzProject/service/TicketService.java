@@ -10,7 +10,7 @@ import java.util.List;
 public interface TicketService {
 
    /* void buyTicket
-    void cancelTicket(Integer id);
-  /*  List<Ticket> getAllTicketForMovieSession(Integer id); */
 
+  /*  List<Ticket> getAllTicketForMovieSession(Integer id); */
+   void cancelTicket(Integer id);
 }

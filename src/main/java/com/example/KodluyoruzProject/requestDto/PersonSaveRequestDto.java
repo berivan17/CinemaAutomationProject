@@ -5,6 +5,7 @@ import lombok.Data;
 @Data
 public class PersonSaveRequestDto {
     private Integer id;
-    private String fullName;
+    private String firstName;
+    private String lastName;
     private String password;
 }

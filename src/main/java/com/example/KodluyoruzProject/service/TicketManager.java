@@ -36,11 +36,6 @@ public class TicketManager implements TicketService{
         ticketRepository.delete(ticket);
     }
 
-  /*  @Override
-    public List<TicketResponseDto> getAllTicketForMovieSession(Integer id) {
 
 
-    }
-
-   */
 }

@@ -18,16 +18,17 @@ public class PersonController {
     PersonService personService;
 
     @PostMapping("/savePerson")
-    public ResponseEntity<Integer> savePerson(@RequestBody PersonSaveRequestDto personSaveRequestDto){
-        Integer id= personService.savePerson(personSaveRequestDto);
-        return new ResponseEntity<>(id, HttpStatus.OK);
+    public ResponseEntity<PersonResponseDto> savePerson(@RequestBody PersonSaveRequestDto personSaveRequestDto){
+        PersonResponseDto personResponseDto=personService.savePerson(personSaveRequestDto);
+        return new ResponseEntity<>(personResponseDto,HttpStatus.OK);
+
     }
     @GetMapping("/findAllPeople")
     public ResponseEntity<List<PersonResponseDto>> findAllPeople(){
         List<PersonResponseDto> personResponseDtoList=personService.findAllPeople();
         return new ResponseEntity<>(personResponseDtoList,HttpStatus.OK);
     }
-    @DeleteMapping("/deleteMovieSession")
+    @DeleteMapping("/deletePerson")
     public void deletePersonById(@RequestParam Integer id){
         personService.deletePersonById(id);
     }

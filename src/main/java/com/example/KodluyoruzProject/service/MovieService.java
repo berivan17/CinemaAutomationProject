@@ -5,7 +5,7 @@ import com.example.KodluyoruzProject.requestDto.MovieSaveRequestDto;
 import com.example.KodluyoruzProject.responseDto.MovieResponseDto;
 
 public interface MovieService {
-    Integer saveMovie(MovieSaveRequestDto movieSaveRequestDto);
+    MovieResponseDto saveMovie(MovieSaveRequestDto movieSaveRequestDto);
     List<MovieResponseDto> findAllMoviesById(Integer id);
     List<MovieResponseDto> findAllMovies();
 

@@ -1,14 +1,14 @@
 package com.example.KodluyoruzProject.controller;
 
+import com.example.KodluyoruzProject.requestDto.MovieSaveRequestDto;
+import com.example.KodluyoruzProject.requestDto.PersonSaveRequestDto;
 import com.example.KodluyoruzProject.responseDto.MovieResponseDto;
+import com.example.KodluyoruzProject.responseDto.PersonResponseDto;
 import com.example.KodluyoruzProject.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,6 +21,13 @@ public class MovieController {
     @Autowired
     public MovieController(MovieService movieService){
         this.movieService=movieService;
+    }
+
+    @PostMapping("/saveMovie")
+    public ResponseEntity<MovieResponseDto> saveMovie(@RequestBody MovieSaveRequestDto movieSaveRequestDto){
+        MovieResponseDto movieResponseDto=movieService.saveMovie(movieSaveRequestDto);
+        return new ResponseEntity<>(movieResponseDto,HttpStatus.OK);
+
     }
 
     @GetMapping("/findAllMovies")
