@@ -12,4 +12,8 @@ In this Cinema Automation Project, you can access movie,movieSession,person and 
 -Lombok <br/>
 
 # API Examples
+![alt text](https://github.com/berivan17/CinemaAutomationProject/blob/KodluyoruzProject/proj1.png) <br/>
+![alt text](https://github.com/berivan17/CinemaAutomationProject/blob/KodluyoruzProject/proj2.png) <br/>
+# H2 Console 
+![alt text](https://github.com/berivan17/CinemaAutomationProject/blob/KodluyoruzProject/proj3.png) <br/>
 
