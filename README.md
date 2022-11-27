@@ -12,5 +12,4 @@ In this Cinema Automation Project, you can access movie,movieSession,person and 
 -Lombok <br/>
 
 # API Examples
-Examples in Issue.
 
